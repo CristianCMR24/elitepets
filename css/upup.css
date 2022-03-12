@@ -1,0 +1,324 @@
+/* ======= Popup ======== */
+:root {
+    --white: #fff;
+    --black: #222;
+    --pink: #f60091;
+    --grey: #444;
+    --grey2: #959595;
+    --grey-alt: #d1e2e9;
+    --yellow: #ffd800;
+    --green: #59b210;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
+  
+  
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    transition: 0.3s;
+    transform: scale(0.2);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .popup.show {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    margin: 0 auto;
+    height: 55rem;
+    transform: translate(-50%, -50%);
+    padding: 1.6rem;
+    display: table;
+    overflow: hidden;
+    background-color: var(--white);
+  }
+  
+  .popup-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 1.5rem 1.7rem;
+    background-color: var(--grey-alt);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .popup-left {
+    display: table-cell;
+    width: 50%;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .popup-right {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+  }
+  
+  .popup-img {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .popup-img img {
+    display: block;
+    width: 60rem;
+    height: 45rem;
+    max-width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  
+  .right-content {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .right-content h1 {
+    font-size: 4rem;
+    color: var(--black);
+    margin-bottom: 1.6rem;
+  }
+  
+  .right-content h1 span {
+    color: var(--green);
+  }
+  
+  .right-content p {
+    font-size: 1.8rem;
+    color: var(--grey2);
+    margin-bottom: 1.6rem;
+  }
+
+  .popup-nombre {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-apellido {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-fecha {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  #tipo {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-id {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  #tipo-sexo {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-email {
+    width: 100%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-contraseña {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+  .popup-contraseña1 {
+    width: 48%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+    .popup-contraseña {
+    width: 50%;
+    padding: 2rem 0;
+    text-indent: 1rem;
+    margin-bottom: 1.6rem;
+    border-radius: 3rem;
+    background-color: var(--grey-alt);
+    border: none;
+  }
+
+
+  .popup-form:focus {
+    outline: none;
+  }
+
+  .right-content a:link,
+  .right-content a:visited {
+    display: inline-block;
+    padding: 1.8rem 5rem;
+    border-radius: 3rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--grey2);
+    transition: 0.3s;
+  }
+  
+  .right-content a:hover {
+    background-color: var(--green);
+    border: 1px solid var(--grey2);
+    color: var(--black);
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .right-content {
+      width: 100%;
+    }
+  
+    .right-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.3rem;
+    }
+  }
+  
+  @media only screen and (max-width: 998px) {
+    .popup-right {
+      width: 100%;
+    }
+  
+    .popup-left {
+      display: none;
+    }
+  
+    .right-content h1 {
+      font-size: 5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .right-content h1 {
+      font-size: 4rem;
+    }
+  
+    .right-content p {
+      font-size: 1.6rem;
+    }
+  
+    .popup-form {
+      width: 90%;
+      margin: 0 auto;
+      padding: 1.8rem 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 568px) {
+    .popup-right {
+      padding: 0 1.6rem;
+    }
+  
+    .popup-content {
+      height: 40rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .right-content {
+      width: 100%;
+    }
+  
+    .right-content h1 {
+      font-size: 3rem;
+    }
+  
+    .right-content p {
+      font-size: 1.4rem;
+    }
+  
+    .popup-form {
+      width: 100%;
+      padding: 1.5rem 0;
+      margin-bottom: 1.3rem;
+    }
+  
+    .right-content a:link,
+    .right-content a:visited {
+      padding: 1.5rem 3rem;
+    }
+  
+    .popup-close {
+      top: 1rem;
+      right: 1rem;
+      padding: 1.3rem;
+    }
+  }
+  

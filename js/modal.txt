@@ -1,0 +1,17 @@
+$(document).ready(function () {
+
+    function showPopup(){
+        $('.pop-up').addClass('show');
+        $('.pop-up-wrap').addClass('show');
+    }
+
+    $("#close").click(function(){
+        $('.pop-up').removeClass('pop-up');
+        $('.pop-up-wrap').removeClass('show');
+    });
+
+    $(".pop-up").click(showPopup);
+
+    setTimeout(showPopup, 2000);
+
+});
